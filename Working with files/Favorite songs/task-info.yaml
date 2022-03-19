@@ -1,0 +1,8 @@
+type: edu
+files:
+- name: songs.txt
+  visible: false
+- name: tests.py
+  visible: false
+- name: main.go
+  visible: true
