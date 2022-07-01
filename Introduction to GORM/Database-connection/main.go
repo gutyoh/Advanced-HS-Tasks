@@ -9,7 +9,7 @@ import (
 
 func main() {
 	// Write the required code to connect to "chinook.db"
-	db, err := gorm.Open(sqlite.Open("chinook.db"), &gorm.Config{})
+	db, err := ?.?(?.?(?), &gorm.Config{})
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -18,6 +18,7 @@ func main() {
 	fmt.Println(checkConnection(db))
 }
 
+::footer
 func checkConnection(db *gorm.DB) string {
 	sqliteDB, err := db.DB()
 	if err != nil {
