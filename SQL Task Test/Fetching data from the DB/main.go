@@ -11,26 +11,28 @@ import (
 const dbFile = "chinook.db"
 
 func main() {
+	// DO NOT delete this code block! It creates the database object:
 	db, err := sql.Open("sqlite3", dbFile)
 	if err != nil {
 		log.Fatal()
 	}
 	defer db.Close()
 
+	// DO NOT delete -- these variables are required to read the data from the DB:
 	var GenreId int
 	var Name string
 
 	// Write the SELECT query to fetch all rows from the 'genres' table:
-	rows, err := db.Query("SELECT * FROM genres")
+	?, err := db.Query("?")
 	if err != nil {
 		log.Fatal()
 	}
 	defer rows.Close()
 
 	// Iterate over the rows:
-	for rows.Next() {
+	for ?.Next() {
 		// Read the columns in each row into the variables:
-		err := rows.Scan(&GenreId, &Name)
+		err := ?.Scan(&?, &?)
 		if err != nil {
 			log.Fatal()
 		}
@@ -38,7 +40,7 @@ func main() {
 	}
 
 	// Check for errors after iterating over the rows
-	if err = rows.Err(); err != nil {
+	if ? = ?.Err(); ? != nil {
 		log.Fatal()
 	}
 }
